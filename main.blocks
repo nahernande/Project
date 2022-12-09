@@ -1,1 +1,18 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="3/U-mUvCPwmGo8G!tRF~" x="0" y="0"></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="ZmV#*!VovVLaX!qn:RIr">Player</variable><variable type="KIND_SpriteKind" id="mc:?Ojr,8TOXUyyZ~G4r">Projectile</variable><variable type="KIND_SpriteKind" id="OSOS,`#;P`jw}`y|$nIJ">Food</variable><variable type="KIND_SpriteKind" id="1MrCHokl-X7GZL[-tM`J">Enemy</variable><variable id="v}O:mH9ILK#HJQuWsO+E">mySprite</variable><variable id="B+pjm[8KBH`.L=::Vc=u">mySprite2</variable></variables><block type="pxt-on-start" id="3/U-mUvCPwmGo8G!tRF~" x="-230" y="-270"><statement name="HANDLER"><block type="set_current_tilemap" id="mu}ERjXl6/@TRAd+-?N5"><value name="tilemap"><shadow type="tiles_tilemap_editor" id=":d!8Gn)du_%8L82t+?2C"><field name="tilemap">tilemap`level1`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"level1"}}</data></shadow></value><next><block type="game_control_sprite" id="BKv|=-xa*fJ}(o4Rk{ZL"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="2o_/3uoS)NKl?*A~o!G;"><field name="VAR" id="v}O:mH9ILK#HJQuWsO+E">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="=J%cHC+M7is}z=)MDF#o"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="~iHzU@3|a57GsBnKB0mK"><field name="speed">100</field></shadow></value><next><block type="variables_set" id="G?nY_?mVK}D3NW;rKIBI"><field name="VAR" id="v}O:mH9ILK#HJQuWsO+E">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="[gxL:VuwL6dZuj[gXnMH"><value name="img"><shadow type="screen_image_picker" id="ndp7yDZ9QY^*40}?dMM`"><field name="img">img`
+. . . . . . f f f f . . . . . . 
+. . . . f f f 2 2 f f f . . . . 
+. . . f f f 2 2 2 2 f f f . . . 
+. . f f f e e e e e e f f f . . 
+. . f f e 2 2 2 2 2 2 e e f . . 
+. . f e 2 f f f f f f 2 e f . . 
+. . f f f f e e e e f f f f . . 
+. f f e f b f 4 4 f b f e f f . 
+. f e e 4 1 f d d f 1 4 e e f . 
+. . f e e d d d d d d e e f . . 
+. . . f e e 4 4 4 4 e e f . . . 
+. . e 4 f 2 2 2 2 2 2 f 4 e . . 
+. . 4 d f 2 2 2 2 2 2 f d 4 . . 
+. . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+. . . . . f f f f f f . . . . . 
+. . . . . f f . . f f . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"ndp7yDZ9QY^*40}?dMM`"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="BE8MDEbZ%U1c}SqZ]99K"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="camerafollow" id="o6KBh$,l{-b(k5p8[Lv#"><value name="sprite"><block type="variables_get" id="+tabADJ~]EQHx2X(p3vn"><field name="VAR" id="v}O:mH9ILK#HJQuWsO+E">mySprite</field></block></value></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="ucPGP=zGbvf,b]E}rQ#." x="230" y="-270"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field></block></xml>
