@@ -1,3 +1,6 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
+    game.over(true)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
@@ -16,7 +19,13 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, mySprite, 0, 100)
+        `, mySprite, controller.dx(10000), controller.dy(10000))
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    Ghost.destroy()
+})
+info.onLifeZero(function () {
+    game.over(false)
 })
 let Ghost: Sprite = null
 let projectile: Sprite = null
