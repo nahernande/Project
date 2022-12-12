@@ -1,9 +1,26 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . 2 2 . . . . . . . . . . . . 
+        . 4 4 2 2 4 4 4 4 4 . . . . . . 
+        . 2 4 4 4 2 2 2 2 2 4 . . . . . 
+        4 2 2 4 4 2 4 4 4 2 2 4 . . . . 
+        4 4 4 2 2 4 2 2 2 4 2 4 . . . . 
+        2 2 4 4 4 4 2 2 2 4 2 4 . . . . 
+        4 2 2 2 2 4 2 2 2 4 2 4 . . . . 
+        4 4 4 4 2 2 4 4 4 2 2 4 . . . . 
+        4 4 4 2 2 2 2 2 2 2 4 . . . . . 
+        4 4 2 2 4 4 2 4 4 4 . . . . . . 
+        . 4 4 4 4 2 2 . . . . . . . . . 
+        . . . . 2 . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, mySprite, 0, 100)
 })
+let projectile: Sprite = null
 let mySprite: Sprite = null
 tiles.setCurrentTilemap(tilemap`level1`)
-controller.moveSprite(mySprite)
 mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -22,4 +39,6 @@ mySprite = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
+controller.moveSprite(mySprite)
+mySprite.setPosition(41, 33)
 scene.cameraFollowSprite(mySprite)
